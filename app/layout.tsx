@@ -1,27 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Alexandria } from "next/font/google";
+import "@fontsource-variable/alexandria"; // Import font globally
 
-const alexandria = Alexandria({
-  subsets: ["latin", "arabic"], // Supports both Latin and Arabic scripts
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Choose weights you need
-  variable: "--font-alexandria", // Custom CSS variable
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Razio لابتوب",
-  description: "رازيو لأجهزة الكمبيوتر المحمولة",
+  description: "Find the best laptops online",
 };
 
 export default function RootLayout({
@@ -30,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ar">
       <body
-        className={`${alexandria.variable} ${geistMono.variable} dark antialiased bg-background`}
+        className="dark antialiased bg-background"
       >
         {children}
       </body>

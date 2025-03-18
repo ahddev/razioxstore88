@@ -122,7 +122,7 @@
     @apply bg-background text-foreground;
   }
 }
-.ibm-plex{
-font-family: 'IBM Plex Sans Arabic', sans-serif;
-}
 
+body {
+  font-family: "Alexandria", sans-serif;
+}
