@@ -7,7 +7,7 @@ import { LaptopMinimal, Search, Star } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="container text-center text-primary mx-auto Alexandria">
+    <div className="container text-center text-primary mx-auto">
       <div className="text-center py-16">
         <div className="lg:text-7xl md:text-6xl text-4xl md:leading-18 leading-14 md:my-6 my-4">رازيو لأجهزة الكمبيوتر المحمولة</div>
         <div className="lg:text-2xl opacity-75 md:mt-8 mt-4">
