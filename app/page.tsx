@@ -9,16 +9,20 @@ export default function Home() {
   return (
     <div className="container text-center text-primary mx-auto">
       <div className="text-center py-16">
-        <div className="lg:text-7xl md:text-6xl text-4xl md:leading-18 leading-14 md:my-6 my-4">رازيو لأجهزة الكمبيوتر المحمولة</div>
+        <div className="lg:text-7xl md:text-6xl text-4xl md:leading-18 leading-14 md:my-6 my-4">
+          رازيو لأجهزة الكمبيوتر المحمولة
+        </div>
         <div className="lg:text-2xl opacity-75 md:mt-8 mt-4">
           اكتشف أفضل أجهزة الكمبيوتر المحمولة في دمشق
         </div>
       </div>
 
       <div className="md:m-10">
-        <Button className="text-xl w-50 h-16 cursor-pointer border-border">
-          <Link href={"/catalog"}>تصفح اللابتوبات</Link>
-        </Button>
+        <Link href={"/catalog"}>
+          <Button className="text-xl p-0 w-50 h-16 cursor-pointer border-border">
+            تصفح اللابتوبات
+          </Button>
+        </Link>
       </div>
 
       <div className="md:mt-10 md:flex gap-10 text-center">
