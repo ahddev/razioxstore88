@@ -1,8 +1,6 @@
 import "@fontsource/ibm-plex-sans-arabic/400.css"; // Regular weight
 import "@fontsource/ibm-plex-sans-arabic/700.css"; // Bold weight
-import { Alexandria } from "next/font/google";
 import { Button } from "@/components/ui/button";
-import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import BioCard from "@/components/ui/bio-cards";
 import { LaptopMinimal, Search, Star } from "lucide-react";
