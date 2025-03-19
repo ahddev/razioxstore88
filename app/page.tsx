@@ -10,7 +10,7 @@ export default function Home() {
     <div className="container text-center text-primary px-2 mx-auto">
       <div>
         <div className="text-center py-16">
-          <div className="lg:text-7xl md:text-6xl text-4xl md:leading-18 leading-14 md:my-6 my-4">
+          <div className="lg:text-7xl md:text-6xl text-4xl font-bold md:leading-18 leading-14 md:my-6 my-4">
             رازيو لأجهزة الكمبيوتر المحمولة
           </div>
           <div className="lg:text-2xl opacity-75 md:mt-8 mt-4">

@@ -4,6 +4,7 @@ import { Alexandria } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar";
+import { Sidebar } from "@/components/sidebar";
 
 const alexandria = Alexandria({
   subsets: ["arabic", "latin"],
@@ -43,8 +44,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          <Navbar />
-          <main className="flex-1 pt-16">{children}</main>
+          
+          <div className=""><Navbar /></div>
+          <div className="flex mt-16" ><Sidebar/></div>
+          <main className="flex-1 md:mr-[23vw]">{children}</main>
         </ThemeProvider>
       </body>
     </html>
