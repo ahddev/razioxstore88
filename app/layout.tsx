@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl" className={alexandria.variable}>
+    <html lang="ar" dir="rtl" className={`${alexandria.variable} dark`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap"
