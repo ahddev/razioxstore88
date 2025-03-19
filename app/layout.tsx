@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Alexandria } from 'next/font/google';
+import { Alexandria } from "next/font/google";
+import Navbar from "@/components/Navbar";
 
-const alexandria = Alexandria({ 
-  subsets: ['arabic', 'latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-alexandria',
+const alexandria = Alexandria({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-alexandria",
   preload: true,
 });
 
@@ -28,7 +29,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-alexandria antialiased">{children}</body>
+      <body className="font-alexandria antialiased">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

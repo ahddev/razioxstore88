@@ -11,7 +11,7 @@ import {
 export default function SearchFilter() {
   return (
     <>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container md:flex mx-auto px-4 py-8">
         <div className="bg-dark-400 rounded-xl mb-4">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative">
@@ -24,7 +24,7 @@ export default function SearchFilter() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="">
           <label className="block mb-2">العلامة التجارية</label>
           <Select>
             <SelectTrigger className="sm:w-[180px] w-[50vw]">
