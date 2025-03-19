@@ -35,18 +35,17 @@ export function Navbar() {
 
           <div className="md:hidden flex items-center space-x-2 rtl:space-x-reverse">
             <ThemeToggle />
-            <Button
+            <Button 
               variant="ghost"
-              size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
             >
               <Menu
-                className="h-6 w-6 absolute transition-opacity duration-200"
+                className="h-12 w-12 absolute transition-opacity duration-200"
                 style={{ opacity: isMenuOpen ? 0 : 1 }}
               />
               <X
-                className="h-6 w-6 absolute transition-opacity duration-200"
+                className="h-12 w-12 absolute transition-opacity duration-200  hover:bg-red-500"
                 style={{ opacity: isMenuOpen ? 1 : 0 }}
               />
             </Button>
