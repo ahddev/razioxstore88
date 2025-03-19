@@ -27,7 +27,7 @@ export default function SearchFilter() {
         <div>
           <label className="block mb-2">العلامة التجارية</label>
           <Select>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="sm:w-[180px] w-[50vw]">
               <SelectValue placeholder="الكل" />
             </SelectTrigger>
             <SelectContent>
