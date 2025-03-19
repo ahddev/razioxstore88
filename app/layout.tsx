@@ -21,8 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl">
-      <body className={`${alexandria.variable} font-alexandria dark antialiased bg-background`}>{children}</body>
+    <html lang="ar" dir="rtl" className={alexandria.variable}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-alexandria antialiased">{children}</body>
     </html>
   );
 }
