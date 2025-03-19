@@ -14,8 +14,8 @@ export default function About() {
         </div>
       </div>
 
-      <div className="lg:w-[62vw] md:w-[80vw] mx-auto">
-        <div className="my-0 md:flex gap-10 text-center">
+      <div className="lg:w-[62vw] md:w-[80vw] w-[90vw] mx-auto">
+        <div className="my-0 md:flex md:gap-10 gap-6 text-center">
           <BioCard
             icon={Shield}
             heading={"ضمان الجودة"}
