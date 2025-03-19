@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Home, Users, Briefcase, Phone, LogIn } from "lucide-react";
+import { Home, Laptop, Info, Phone, LogIn, LogOut } from 'lucide-react';
 
 export interface NavItem {
   title: string;
@@ -18,13 +18,13 @@ export const navigationConfig: NavItem[] = [
   {
     title: "اللابتوبات",
     href: "/catalog",
-    icon: Briefcase,
+    icon: Laptop,
     variant: "ghost",
   },
   {
     title: "من نحن",
     href: "/about",
-    icon: Users,
+    icon: Info,
     variant: "ghost",
   },
   {
