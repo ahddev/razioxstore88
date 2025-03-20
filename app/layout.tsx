@@ -47,7 +47,7 @@ export default function RootLayout({
           
           <div className=""><Navbar /></div>
           <div className="flex mt-16" ><Sidebar/></div>
-          <main className="flex-1 md:mr-[23vw]">{children}</main>
+          <main className="flex-1 lg:mr-[16vw] md:mr-[23vw]">{children}</main>
         </ThemeProvider>
       </body>
     </html>

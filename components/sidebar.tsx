@@ -10,7 +10,7 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="fixed w-[23vw] h-full right-0 z-50 bg-background/80 backdrop-blur-sm p-4 hidden md:block">
+    <div className="fixed border lg:w-[16vw] w-[23vw] h-full right-0 z-50 bg-background/80 backdrop-blur-sm p-4 hidden md:block">
       <div className="py-4 space-y-2">
         {navigationConfig.map((item) => (
           <Button
