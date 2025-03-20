@@ -1,25 +1,25 @@
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import SearchFilter from "./search-filter";
-import { MessageCircle } from "lucide-react";
+// import { MessageCircle } from "lucide-react";
 
 export default function Catalog() {
-  interface Brand {
-    id: string;
-    name: string;
-  }
-  interface Laptop {
-    id: string;
-    brand_id: string;
-    model: string;
-    price: number;
-    processor: string;
-    ram: string;
-    storage: string;
-    display: string;
-    gpu: string;
-    images: string[];
-    brand: Brand;
-  }
+//   interface Brand {
+//     id: string;
+//     name: string;
+//   }
+//   interface Laptop {
+//     id: string;
+//     brand_id: string;
+//     model: string;
+//     price: number;
+//     processor: string;
+//     ram: string;
+//     storage: string;
+//     display: string;
+//     gpu: string;
+//     images: string[];
+//     brand: Brand;
+//   }
   
   return (
     <div className="container mx-auto p-2">
