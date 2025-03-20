@@ -1,3 +1,4 @@
+import { BorderBeam } from "@/components/magicui/border-beam";
 import {
   Card,
   CardContent,
@@ -7,12 +8,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Lock , Mail } from "lucide-react";
+import { Lock, Mail } from "lucide-react";
 import Link from "next/link";
 export default function LogIn() {
   return (
     <div className="container mt-50 md:w-100 w-[80vw] mx-auto">
-      <Card>
+      <Card className="relative overflow-hidden">
         <CardHeader>
           <CardTitle className="text-xl text-bold text-center">
             تسجيل الدخول
@@ -21,11 +22,11 @@ export default function LogIn() {
         <CardContent>
           <label>البريد الإلكتروني</label>
           <CardFooter className="flex-col">
-          <div className="relative md:w-86 w-[66vw] ">
-            <Input className="my-4 mx-0" />
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />{" "}
-          </div>
-        </CardFooter>
+            <div className="relative md:w-86 w-[66vw] ">
+              <Input className="my-4 mx-0" />
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />{" "}
+            </div>
+          </CardFooter>
         </CardContent>
         <CardFooter className="flex-col">
           <label className="">كلمة السر</label>
@@ -43,6 +44,17 @@ export default function LogIn() {
             أنشئ حساباً
           </Link>
         </CardDescription>
+        <BorderBeam
+          duration={6}
+          size={400}
+          className="from-transparent via-accent-foreground to-transparent"
+        />
+        <BorderBeam
+          duration={6}
+          delay={3}
+          size={400}
+          className="from-transparent via-secondary-foreground to-transparent"
+        />
       </Card>
     </div>
   );
