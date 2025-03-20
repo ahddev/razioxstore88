@@ -22,7 +22,7 @@ export default function Home() {
             </div>
           </BlurFade>
         </div>
-        <BlurFade delay={0.25 * 5} inView>
+        <BlurFade delay={0.25 * 3} inView>
           <div className="md:m-10">
             <Link href={"/catalog"}>
               <Button className="text-xl p-0 w-50 h-16 cursor-pointer border-border">
@@ -33,21 +33,21 @@ export default function Home() {
         </BlurFade>
 
         <div className="md:mt-10 md:flex gap-10 text-center">
-          <BlurFade delay={0.25 * 8} inView>
+          <BlurFade delay={0.25 * 5} inView>
             <BioCard
               icon={LaptopMinimal}
               heading={"تشكيلة واسعة"}
               description={"مجموعة متنوعة من أفضل العلامات التجارية العالمية"}
             />
           </BlurFade>
-          <BlurFade delay={0.25 * 9} inView>
+          <BlurFade delay={0.25 * 6} inView>
             <BioCard
               icon={Search}
               heading={"بحث متقدم"}
               description={"ابحث حسب المواصفات والسعر والعلامة التجارية"}
             />
           </BlurFade>
-          <BlurFade delay={0.25 * 10} inView>
+          <BlurFade delay={0.25 * 7} inView>
             <BioCard
               icon={Star}
               heading={"خدمة متميزة"}

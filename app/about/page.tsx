@@ -39,7 +39,7 @@ export default function About() {
               }
             />
           </BlurFade>
-          <BlurFade delay={0.25 * 7} inView>
+          <BlurFade delay={0.25 * 6} inView>
             <BioCard
               icon={Clock}
               heading={"دعم متواصل"}
@@ -47,7 +47,7 @@ export default function About() {
             />
           </BlurFade>
         </div>
-        <BlurFade delay={0.25 * 8} inView>
+        <BlurFade delay={0.25 * 7} inView>
           <div className="border bg-card p-8 rounded-xl">
             <h2 className="text-2xl font-bold mb-4">قصتنا</h2>
             <p className="text-primary opacity-70 mb-4">
