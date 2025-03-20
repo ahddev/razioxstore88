@@ -21,7 +21,7 @@ export function Hero() {
 
   return(
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
-      <span className="pointer-events-none z-10 whitespace-pre-wrap text-center leading-none">
+<span className="z-10 whitespace-pre-wrap text-center leading-none">
 
         <div className="text-center py-16">
           <BlurFade delay={0.25} inView>
@@ -40,16 +40,16 @@ export function Hero() {
         <BlurFade delay={0.25 * 3} inView>
           <div className="md:m-10">
             <Link href={"/catalog"}>
-              <Button
-                className="text-xl p-0 w-50 h-16 cursor-pointer border-border relative overflow-hidden"
+              <Button 
+                className="text-xl p-0 w-50 h-16 cursor-pointer  relative overflow-hidden"
                 size="lg"
                 variant="outline"
               >
                 تصفح اللابتوبات
                 <BorderBeam
-                  size={120}
+                  size={250}
                   initialOffset={20}
-                  className="from-transparent via-yellow-500 to-transparent"
+                  className=" from-transparent via-yellow-500 to-transparent"
                   transition={{
                     type: "spring",
                     stiffness: 60,
