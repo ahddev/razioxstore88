@@ -4,21 +4,29 @@ import { createClient } from "@/utils/supabase/client";
 import SearchFilter from "./search-filter";
 import { useEffect, useState } from "react";
 import { Tables } from "@/database.types";
-import { BorderBeam } from "@/components/magicui/border-beam";
-import { div, image } from "motion/react-client";
-// import { MessageCircle } from "lucide-react";
+import { Fullscreen, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Catalog() {
   const [supabase] = useState(createClient());
   const [laptops, setLaptops] = useState<Tables<"laptops">[]>();
+  const [query, setQuery] = useState<string>();
 
   useEffect(() => {
     const fetchData = async () => {
-      const query = await supabase
-        .from("laptops")
-        .select("*")
-        .order("order", { ascending: false });
-      const data = query.data;
+      const _query = query
+        ? await supabase
+            .from("laptops")
+            .select("*")
+            .textSearch("brand", query, {type: 'websearch'})
+            .order("order", { ascending: false })
+        : await supabase
+            .from("laptops")
+            .select("*")
+            .order("order", { ascending: false });
+            
+      const data = _query.data;
 
       if (!data) {
         return;
@@ -28,21 +36,26 @@ export default function Catalog() {
     };
 
     fetchData();
-  }, [supabase]);
+  }, [supabase, query]);
 
   return (
     <div className="container mx-auto p-2">
-      <SearchFilter />
+      <SearchFilter onChangeQueryParams={setQuery} />
       <div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {laptops?.map((x) => (
-            <div className="bg-card border-card rounded-xl shadow-lg overflow-hidden hover:shadow-md hover:scale-105 hover:rotate-1 cursor-pointer transform transition-transform ">
-              <img
+            <div
+              key={x.id}
+              className="bg-card border-card rounded-xl shadow-lg overflow-hidden hover:shadow-md hover:scale-105 hover:rotate-1 cursor-pointer transform transition-transform "
+            >
+              <Image
                 className="w-full object-cover "
                 src={x.images ?? ""}
                 alt={x.model ?? ""}
+                width={512}
+                height={512}
               />
-              <div className="py-6 px-4" >
+              <div className="py-6 px-4">
                 <div dir="ltr" className="text-2xl">
                   {x.brand} {x.model}
                 </div>
@@ -53,6 +66,12 @@ export default function Catalog() {
                   <div>{x.gpu}</div>
                   <div>{x.display}</div>
                 </div>
+              </div>
+              <div>
+                <Button>
+                  استفسار
+                  <MessageCircle />
+                </Button>
               </div>
             </div>
           ))}
