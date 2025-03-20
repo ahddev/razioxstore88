@@ -1,13 +1,15 @@
-// import { SupabaseAuthClient } from "@supabase/supabase-js/dist/module/lib/SupabaseAuthClient";
+import { div } from "motion/react-client";
 
 export default function Admin() {
 
-  return (
-    <div>
-      <div className="bg-card">
+return(
+<div className="container">
 
-      </div>
-      <div className="bg-card"></div>
-    </div>
-  );
+<div>
+  
+</div>
+</div>
+)
+
+
 }

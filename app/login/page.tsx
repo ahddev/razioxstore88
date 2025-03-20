@@ -1,4 +1,5 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -12,7 +13,7 @@ import { Lock, Mail } from "lucide-react";
 import Link from "next/link";
 export default function LogIn() {
   return (
-    <div className="container mt-50 md:w-100 w-[80vw] mx-auto">
+    <div className="container md:mt-50 mt-40 md:w-100 w-[80vw] mx-auto">
       <Card className="relative overflow-hidden">
         <CardHeader>
           <CardTitle className="text-xl text-bold text-center">
@@ -29,11 +30,12 @@ export default function LogIn() {
           </CardFooter>
         </CardContent>
         <CardFooter className="flex-col">
-          <label className="">كلمة السر</label>
-          <div className="relative md:w-86 w-[66vw] ">
+        <label className="text-right flex-1 self-start">كلمة السر</label>
+        <div className="relative md:w-86 w-[66vw] ">
             <Input className="my-4 " />
             <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />
           </div>
+        <Button className="px-4 mt-6">تسجيل الدخول</Button>
         </CardFooter>
         <CardDescription className="mr-6 flex">
           <div>اليس لديك حساب؟</div>
