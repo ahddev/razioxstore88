@@ -69,14 +69,14 @@ export function Hero() {
             description={"مجموعة متنوعة من أفضل العلامات التجارية العالمية"}
           />
         </BlurFade>
-        <BlurFade delay={0.25 * 6} inView>
+        <BlurFade delay={0.25 * 5} inView>
           <BioCard
             icon={Search}
             heading={"بحث متقدم"}
             description={"ابحث حسب المواصفات والسعر والعلامة التجارية"}
           />
         </BlurFade>
-        <BlurFade delay={0.25 * 7} inView>
+        <BlurFade delay={0.25 * 5} inView>
           <BioCard
             icon={Star}
             heading={"خدمة متميزة"}
