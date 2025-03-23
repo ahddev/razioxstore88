@@ -6,9 +6,9 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { BlurFade } from "./magicui/blur-fade";
 import { BorderBeam } from "./magicui/border-beam";
-import { Particles } from "./magicui/particles";
 import BioCard from "./ui/bio-cards";
 import { LaptopMinimal, Search, Star } from "lucide-react";
+import { Particles } from "./magicui/particles";
 
 export function Hero() {
   const { resolvedTheme } = useTheme();
