@@ -26,27 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="ar"
-      dir="rtl"
-      className={cn(alexandria.variable, "scroll-smooth")}
-      suppressHydrationWarning
-    >
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="font-alexandria antialiased  flex flex-col">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-        >
-          
-          <div className=""><Navbar /></div>
-          <div className="flex mt-16" ><Sidebar/></div>
+    <html lang="ar" dir="rtl" className={cn(alexandria.variable, "scroll-smooth")} suppressHydrationWarning>
+      <body className="font-alexandria antialiased flex flex-col">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <div className="">
+            <Navbar />
+          </div>
+          <div className="flex mt-16">
+            <Sidebar />
+          </div>
           <main className="flex-1 lg:mr-[16vw] md:mr-[23vw]">{children}</main>
         </ThemeProvider>
       </body>
