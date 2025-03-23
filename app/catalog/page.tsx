@@ -67,7 +67,7 @@ export default function Catalog() {
                   <div>{x.gpu}</div>
                   <div>{x.display}</div>
                 </div>
-                <div className="text-xl m-5">{x.price ?? " "}</div>
+                <div className="text-xl m-5">{x.price ?? " "}$</div>
               </div>
               <div>
                 <Button>
