@@ -4,14 +4,14 @@ import { createClient } from "@/utils/supabase/client";
 // import SearchFilter from "./search-filter";
 import { useEffect, useState } from "react";
 import { Tables } from "@/database.types";
-import { Fullscreen, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function Catalog() {
   const [supabase] = useState(createClient());
   const [laptops, setLaptops] = useState<Tables<"laptops">[]>();
-  const [query, setQuery] = useState<string>();
+  const [query] = useState<string>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,7 +67,7 @@ export default function Catalog() {
                   <div>{x.gpu}</div>
                   <div>{x.display}</div>
                 </div>
-                <div className="text-xl">{x.price}</div>
+                <div className="text-xl m-5">{x.price ?? " "}</div>
               </div>
               <div>
                 <Button>
