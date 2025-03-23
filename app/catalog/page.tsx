@@ -19,13 +19,13 @@ export default function Catalog() {
         ? await supabase
             .from("laptops")
             .select("*")
-            .textSearch("brand", query, {type: 'websearch'})
+            .textSearch("brand", query, { type: "websearch" })
             .order("order", { ascending: false })
         : await supabase
             .from("laptops")
             .select("*")
             .order("order", { ascending: false });
-            
+
       const data = _query.data;
 
       if (!data) {
