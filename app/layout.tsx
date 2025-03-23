@@ -38,7 +38,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-alexandria antialiased min-h-screen flex flex-col">
+      <body className="font-alexandria antialiased  flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

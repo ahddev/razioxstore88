@@ -1,7 +1,7 @@
 "use client";
 import { createClient } from "@/utils/supabase/client";
 // import { Button } from "@/components/ui/button";
-import SearchFilter from "./search-filter";
+// import SearchFilter from "./search-filter";
 import { useEffect, useState } from "react";
 import { Tables } from "@/database.types";
 import { Fullscreen, MessageCircle } from "lucide-react";
@@ -40,7 +40,8 @@ export default function Catalog() {
 
   return (
     <div className="container mx-auto p-2">
-      <SearchFilter onChangeQueryParams={setQuery} />
+      {/* <SearchFilter onChangeQueryParams={setQuery} /> */}
+
       <div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {laptops?.map((x) => (
@@ -66,6 +67,7 @@ export default function Catalog() {
                   <div>{x.gpu}</div>
                   <div>{x.display}</div>
                 </div>
+                <div className="text-xl">{x.price}</div>
               </div>
               <div>
                 <Button>
