@@ -6,8 +6,6 @@ export default function Home() {
   return (
     <div className="container text-center text-primary px-2 mx-auto">
       <Hero />
-
-      
     </div>
   );
 }
