@@ -13,7 +13,7 @@ import { Lock, Mail } from "lucide-react";
 import Link from "next/link";
 export default function LogIn() {
   return (
-    <div className="container md:mt-50 mt-40 md:w-100 w-[80vw] mx-auto">
+    <div className="container md:mt-48 mt-40 md:w-100 w-[80vw] mx-auto">
       <Card className="relative overflow-hidden">
         <CardHeader>
           <CardTitle className="text-xl text-bold text-center">
