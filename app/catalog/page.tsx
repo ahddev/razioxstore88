@@ -1,4 +1,3 @@
-"use client";
 import { createClient } from "@/utils/supabase/client";
 // import { Button } from "@/components/ui/button";
 // import SearchFilter from "./search-filter";
