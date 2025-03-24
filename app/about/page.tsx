@@ -1,3 +1,5 @@
+"use client";
+
 import { BlurFade } from "@/components/magicui/blur-fade";
 import BioCard from "@/components/ui/bio-cards";
 import { Award, Clock, Shield } from "lucide-react";
