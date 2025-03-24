@@ -8,28 +8,27 @@ import { MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-
 export default function Catalog() {
   const [supabase] = useState(createClient());
   const [laptops, setLaptops] = useState<Tables<"laptops">[]>();
   const [query] = useState<string>();
-  
-//   const HandleWhatsAppInquiry = () => {
-//     const message = `مرحباً، أود الاستفسار عن جهاز ${laptop.brand.name} ${laptop.model}
-// المواصفات: 
-// - المعالج: ${laptop.processor}
-// - الذاكرة: ${laptop.ram}
-// - التخزين: ${laptop.storage}
-// - الشاشة: ${laptop.display}
-// - كرت الشاشة: ${laptop.gpu}`;
 
-//     const whatsappNumber = "+963937005789"; // Replace with actual number
-//     const encodedMessage = encodeURIComponent(message);
-//     window.open(
-//       `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
-//       "_blank"
-//     );
-//   };
+  const HandleWhatsAppInquiry = (laptop: Tables<"laptops">) => {
+    const message = `مرحباً، أود الاستفسار عن جهاز ${laptop.brand} ${laptop.model}
+المواصفات: 
+- المعالج: ${laptop.processor}
+- الذاكرة: ${laptop.ram}
+- التخزين: ${laptop.storage}
+- الشاشة: ${laptop.display}
+- كرت الشاشة: ${laptop.gpu}`;
+
+    const whatsappNumber = "+963937005789";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,7 +41,7 @@ export default function Catalog() {
         : await supabase
             .from("laptops")
             .select("*")
-            .order("order", { ascending: true });
+            .order("order", { ascending: false });
 
       const data = _query.data;
 
@@ -89,7 +88,7 @@ export default function Catalog() {
               <div className="fixed bottom-6 right-4">
                 <div className="text-xl m-5">{x.price ?? " "}$</div>
                 <Button
-                  // onClick={() => HandleWhatsAppInquiry(laptop)}
+                  onClick={() => HandleWhatsAppInquiry(x)}
                   className="cursor-pointer"
                 >
                   استفسار
