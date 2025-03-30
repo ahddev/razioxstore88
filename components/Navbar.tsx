@@ -81,7 +81,7 @@ export function Navbar() {
           className={cn(
             "md:hidden",
             "transition-all duration-200 ease-in-out",
-            "overflow-hidden",
+            "overflow-y-auto", // Changed from overflow-hidden to overflow-y-auto
             isMenuOpen ? "max-h-64" : "max-h-0"
           )}
         >
