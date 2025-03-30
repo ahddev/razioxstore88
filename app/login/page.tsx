@@ -1,3 +1,4 @@
+"use client";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,8 +11,11 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Lock, Mail } from "lucide-react";
-import Link from "next/link";
+import { useState } from "react";
 export default function LogIn() {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
   return (
     <div className="container md:mt-48 mt-40 md:w-100 w-[80vw] mx-auto">
       <Card className="relative overflow-hidden">
@@ -24,27 +28,37 @@ export default function LogIn() {
           <label>البريد الإلكتروني</label>
           <CardFooter className="flex-col">
             <div className="relative md:w-86 w-[66vw] ">
-              <Input className="my-4 mx-0" />
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="my-4 mx-0"
+              />
               <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />{" "}
             </div>
           </CardFooter>
         </CardContent>
         <CardFooter className="flex-col">
-        <label className="text-right flex-1 self-start">كلمة السر</label>
-        <div className="relative md:w-86 w-[66vw] ">
-            <Input className="my-4 " />
+          <label className="text-right flex-1 self-start">كلمة السر</label>
+          <div className="relative md:w-86 w-[66vw] ">
+            <Input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="my-4 "
+            />
             <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />
           </div>
-        <Button className="px-4 mt-6">تسجيل الدخول</Button>
+          <Button className="px-4 mt-6">تسجيل الدخول</Button>
         </CardFooter>
         <CardDescription className="mr-6 flex">
-          <div>اليس لديك حساب؟</div>
+          {/* <div>اليس لديك حساب؟</div>
           <Link
             className="mr-2 text-white/75 underline hover:font-bold hover:text-white/100"
             href={"/register"}
           >
             أنشئ حساباً
-          </Link>
+          </Link> */}
         </CardDescription>
         <BorderBeam
           duration={6}

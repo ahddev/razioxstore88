@@ -1,3 +1,4 @@
+'use client'
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,12 +12,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Lock, Mail, User } from "lucide-react";
 import Link from "next/link";
-// import { useState } from "react";
+import { useState } from "react";
 
 export default function Register() {
-  // const [name, setName] = useState<string>("");
-  // const [email, setEmail] = useState<string>("");
-  // const [password, setPassword] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   return (
 
@@ -33,8 +34,8 @@ export default function Register() {
             <div className="relative md:w-86 w-[66vw] ">
               <Input
                 type="text"
-                // value={name}
-                // onChange={(e) => setName(e.target.value)}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="my-4 mx-0"
               />
               <User className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />
@@ -47,8 +48,8 @@ export default function Register() {
             <div className="relative md:w-86 w-[66vw] ">
               <Input
                 type="email"
-                // value={email}
-                // onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="my-4 mx-0"
               />
               <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />
@@ -60,8 +61,8 @@ export default function Register() {
           <div className="relative md:w-86 w-[66vw] ">
             <Input
               type="password"
-              // value={password}
-              // onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="my-4 mx-0"
             />
             <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />
