@@ -8,7 +8,7 @@ import { MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-export default function Catalog() {
+export default function Laptops() {
   const [supabase] = useState(createClient());
   const [laptops, setLaptops] = useState<Tables<"laptops">[]>();
   const [query] = useState<string>();
@@ -41,7 +41,7 @@ export default function Catalog() {
         : await supabase
             .from("laptops")
             .select("*")
-            .order("order", { ascending: false });
+            .order("order", { ascending: true });
 
       const data = _query.data;
 

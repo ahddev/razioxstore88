@@ -24,7 +24,7 @@ export function Hero() {
         <div className="text-center py-16">
           <BlurFade delay={0.25} inView>
             <div className="lg:text-7xl md:text-6xl text-4xl z-20 font-bold md:leading-18 leading-14 md:my-6 my-4">
-              رازيو لأجهزة الكمبيوتر المحمولة
+              رايزيو لأجهزة الكمبيوتر المحمولة
             </div>
             <div className="z-0"></div>
           </BlurFade>
@@ -36,9 +36,9 @@ export function Hero() {
         </div>
         <BlurFade delay={0.25 * 3} inView>
           <div className="md:m-10">
-            <Link href={"/catalog"}>
+            <Link href={"/laptops"}>
               <Button
-                className="text-xl p-0 w-50 h-16 cursor-pointer  relative overflow-hidden"
+                className="text-xl p-0 w-50 h-16 cursor-pointer relative overflow-hidden"
                 size="lg"
                 variant="outline"
               >

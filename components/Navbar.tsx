@@ -45,10 +45,10 @@ export function Navbar() {
             className="flex items-center space-x-2 rtl:space-x-reverse"
           >
             <Laptop2 className="h-6 w-6" />
-            <span className="font-bold text-lg">رازيو</span>
+            <span className="font-bold text-lg">رايزيو</span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-4 rtl:space-x-reverse">
+          <div className="hidden md:flex items-center gap-4 rtl:space-x-reverse">
             <Button variant="default" asChild>
               <Link href="/login">تسجيل الدخول</Link>
             </Button>
