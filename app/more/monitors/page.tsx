@@ -29,12 +29,11 @@ export default function Monitors() {
         ? await supabase
             .from("monitors")
             .select("*")
-            .textSearch("brand", query, { type: "websearch" })
             .order("order", { ascending: false })
         : await supabase
             .from("monitors")
             .select("*")
-            .order("order", { ascending: true });
+            .order("order", { ascending: false });
 
       const data = _query.data;
 
@@ -50,8 +49,6 @@ export default function Monitors() {
 
   return (
     <div className="container mx-auto p-2">
-      {/* <SearchFilter onChangeQueryParams={setQuery} /> */}
-
       <div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {monitors?.map((x) => (
@@ -81,7 +78,7 @@ export default function Monitors() {
                   className="cursor-pointer"
                 >
                   استفسار
-                  <MessageCircle />
+                  <MessageCircle className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>

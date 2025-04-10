@@ -18,6 +18,9 @@ export default function LogIn() {
 
   return (
     <div className="container md:mt-48 mt-40 md:w-100 w-[80vw] mx-auto">
+      <div className="text-center text-red-500 text-sm">
+        Sorry, this page is currently only for admins
+      </div>
       <Card className="relative overflow-hidden">
         <CardHeader>
           <CardTitle className="text-xl text-bold text-center">
