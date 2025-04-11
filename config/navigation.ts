@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Home, Laptop, Info, Phone, LogIn, Monitor } from 'lucide-react';
+import { Home, Laptop, Info, Phone, LogIn, Monitor, User } from 'lucide-react';
 
 export interface NavItem {
   title: string;
@@ -37,6 +37,12 @@ export const navigationConfig: NavItem[] = [
     title: "اتصل بنا",
     href: "/contact",
     icon: Phone,
+    variant: "ghost",
+  },
+  {
+    title: "الإدارة",
+    href: "/admin",
+    icon: User,
     variant: "ghost",
   },
   {

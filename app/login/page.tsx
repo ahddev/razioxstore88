@@ -52,7 +52,7 @@ export default function LogIn() {
             />
             <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-dark-200" />
           </div>
-          <Button className="px-4 mt-6">تسجيل الدخول</Button>
+          <Button className="px-4 mt-6 cursor-pointer">تسجيل الدخول</Button>
         </CardFooter>
         <CardDescription className="mr-6 flex">
           {/* <div>اليس لديك حساب؟</div>
