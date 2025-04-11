@@ -60,7 +60,7 @@ export default function Laptops() {
       {/* <SearchFilter onChangeQueryParams={setQuery} /> */}
 
       {isLoading ? (
-        <div className="text-center text-2xl mt-12">Loading...</div>
+        <div dir="ltr" className="text-center text-2xl mt-12">Loading...</div>
       ) : (
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
