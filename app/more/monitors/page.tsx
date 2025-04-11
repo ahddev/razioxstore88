@@ -59,7 +59,7 @@ export default function Monitors() {
   return (
     <div className="container mx-auto p-2">
       {isLoading ? (
-        <div className="text-center text-2xl">Loading...</div>
+        <div className="text-center text-2xl mt-12">Loading...</div>
       ) : (
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
